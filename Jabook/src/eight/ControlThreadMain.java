@@ -6,7 +6,7 @@ class ControlThread extends Thread {
 	public static boolean all_exit = false;
 	
 	// 스레드의 종료를 제어하는 플래그
-	private boolean flag = false;
+	private boolean flag = false; 
 
 	public void run() {
 		int count = 0;
