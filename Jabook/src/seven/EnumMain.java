@@ -1,4 +1,4 @@
-package jabook.seven;
+package seven;
 
 enum SignFlag {
 	black, yellow, green, blue, red

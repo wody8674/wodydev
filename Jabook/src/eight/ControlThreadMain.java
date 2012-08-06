@@ -1,4 +1,4 @@
-package jabook.eight;
+package eight;
 
 class ControlThread extends Thread {
 	

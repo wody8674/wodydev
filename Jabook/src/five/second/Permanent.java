@@ -1,4 +1,4 @@
-package jabook.five.second;
+package five.second;
 
 public class Permanent extends Employee {
 	private int salary;

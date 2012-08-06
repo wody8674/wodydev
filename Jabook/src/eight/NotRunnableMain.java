@@ -1,4 +1,4 @@
-package jabook.eight;
+package eight;
 
 public class NotRunnableMain {
 	public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package jabook.eight;
+package eight;
 
 class TerminateThread extends Thread {
 	

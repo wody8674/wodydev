@@ -1,4 +1,4 @@
-package jabook.eight;
+package eight;
 
 class Bank {
 	private int money = 10000; // ¿¹±İ ÀÜ¾×

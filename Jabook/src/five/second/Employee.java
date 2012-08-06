@@ -1,4 +1,4 @@
-package jabook.five.second;
+package five.second;
 
 public abstract class Employee {
 	private String name;

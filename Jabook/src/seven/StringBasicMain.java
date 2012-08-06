@@ -1,4 +1,4 @@
-package jabook.seven;
+package seven;
 
 public class StringBasicMain {
 	public static void main(String[] args) {

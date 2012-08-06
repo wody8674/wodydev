@@ -1,4 +1,4 @@
-package jabook.seven;
+package seven;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;

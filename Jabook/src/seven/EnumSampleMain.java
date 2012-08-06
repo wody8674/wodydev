@@ -1,4 +1,4 @@
-package jabook.seven;
+package seven;
 
 enum PaintStyle {
 	DASH, DB_DASH, DOT, DB_DOT

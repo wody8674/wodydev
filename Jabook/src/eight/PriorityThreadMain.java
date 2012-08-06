@@ -1,4 +1,4 @@
-package jabook.eight;
+package eight;
 
 class PriorityThread extends Thread {
 	public void run() {

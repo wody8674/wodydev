@@ -1,4 +1,4 @@
-package jabook.seven;
+package seven;
 
 public class StringBuilderSpeedMain {
 	public static void main(String[] args) {

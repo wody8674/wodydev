@@ -1,4 +1,4 @@
-package jabook.eight;
+package eight;
 
 import java.awt.Frame;
 

@@ -1,4 +1,4 @@
-package jabook.eight;
+package eight;
 
 class Data {
 	public int i = 0;

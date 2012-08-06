@@ -1,11 +1,11 @@
-package jabook.eight;
+package eight;
 
 import java.util.Vector;
 
-class VideoShop {
+class VideoShop3 {
 	private Vector buffer = new Vector();
 
-	public VideoShop() {
+	public VideoShop3() {
 		buffer.addElement("은하철도999-0");
 		buffer.addElement("은하철도999-1");
 		buffer.addElement("은하철도999-2");
@@ -26,7 +26,7 @@ class VideoShop {
 	}
 }
 
-class Person extends Thread {
+class Person3 extends Thread {
 	public void run() {
 		String v = VideoShopMain3.vShop.lendVideo();
 		if (v == null) {
@@ -49,15 +49,15 @@ class Person extends Thread {
 }
 
 public class VideoShopMain3 {
-	public static VideoShop vShop = new VideoShop();
+	public static VideoShop3 vShop = new VideoShop3();
 
 	public static void main(String[] args) {
 		System.out.println("프로그램 시작");
-		Person p1 = new Person();
-		Person p2 = new Person();
-		Person p3 = new Person();
-		Person p4 = new Person();
-		Person p5 = new Person();
+		Person3 p1 = new Person3();
+		Person3 p2 = new Person3();
+		Person3 p3 = new Person3();
+		Person3 p4 = new Person3();
+		Person3 p5 = new Person3();
 		p1.start();
 		p2.start();
 		p3.start();

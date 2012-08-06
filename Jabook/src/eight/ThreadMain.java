@@ -1,4 +1,4 @@
-package jabook.eight;
+package eight;
 
 /** 
 * Runnable을 구현해서 만드는 스레드(스레드를 생성하는 방법) 

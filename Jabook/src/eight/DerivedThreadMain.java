@@ -1,4 +1,4 @@
-package jabook.eight;
+package eight;
 
 /**
  * Thread를 상속하는 스레드 만들기(Thread 상속) 

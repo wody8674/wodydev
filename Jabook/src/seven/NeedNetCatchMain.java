@@ -1,4 +1,4 @@
-package jabook.seven;
+package seven;
 
 import java.net.MalformedURLException;
 import java.net.URL;

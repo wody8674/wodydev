@@ -1,4 +1,4 @@
-package jabook.eight;
+package eight;
 
 class NotRunnableThread extends Thread {
 	public void run() {

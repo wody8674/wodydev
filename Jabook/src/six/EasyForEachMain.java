@@ -1,4 +1,4 @@
-package jabook.six;
+package six;
 
 public class EasyForEachMain {
 	public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package jabook.six;
+package six;
 
 import java.util.Enumeration;
 import java.util.Hashtable;

@@ -1,4 +1,4 @@
-package jabook.seven;
+package seven;
 
 public class BasicException {
 	public static void main(String args[]) {

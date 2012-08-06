@@ -1,4 +1,4 @@
-package jabook.five.first;
+package five.first;
 
 import java.util.Vector;
 

@@ -1,4 +1,4 @@
-package jabook.seven;
+package seven;
 
 public class StringFormattingMain {
 	public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package jabook.seven;
+package seven;
 
 public class VarArgsMain2 {
 	public static void display(String... strs) {

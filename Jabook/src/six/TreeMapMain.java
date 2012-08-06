@@ -1,4 +1,4 @@
-package jabook.six;
+package six;
 
 import java.util.HashMap;
 import java.util.Map;

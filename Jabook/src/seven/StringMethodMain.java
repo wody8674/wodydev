@@ -1,4 +1,4 @@
-package jabook.seven;
+package seven;
 
 import static java.lang.System.out;
 

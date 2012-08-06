@@ -1,4 +1,4 @@
-package jabook.seven;
+package seven;
 
 public class BombComputer {
 	boolean power = false;

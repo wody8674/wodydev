@@ -1,4 +1,4 @@
-package jabook.five.first;
+package five.first;
 
 public class PolymorphismMain {
 	public static void main(String[] args){

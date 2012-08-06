@@ -1,4 +1,4 @@
-package jabook.eight;
+package eight;
 
 /**
  * Thread를 상속하는 두 개의 스레드를 생성한 후 실행시키기(Thread 상속) 
