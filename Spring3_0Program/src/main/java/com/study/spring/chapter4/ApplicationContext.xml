@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean class="org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor">
+	</bean>
+
+	<bean id="camera1" class="com.study.spring.chapter4.Camera">
+		<!-- number 프로퍼티에 @Required 어노테이션 적용 
+			 number 프로퍼티를 설정하지 않을 경우 예외 발생 -->
+		<property name="number" value="1"></property>
+	</bean>
+
+</beans>
