@@ -8,6 +8,7 @@
 	<enableImports><![CDATA[true]]></enableImports>
 	<configs>
 		<config>src/main/java/com/study/spring/chapter4/ApplicationContext.xml</config>
+		<config>src/main/java/com/study/spring/chapter5/acQuickStart.xml</config>
 	</configs>
 	<configSets>
 	</configSets>
