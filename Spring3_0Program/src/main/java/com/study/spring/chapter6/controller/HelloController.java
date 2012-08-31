@@ -1,11 +1,19 @@
 package com.study.spring.chapter6.controller;
 
 import java.util.Calendar;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.study.spring.chapter6.vo.HelloVo;
@@ -14,6 +22,18 @@ import com.study.spring.chapter6.vo.OrderItem;
 
 @Controller
 public class HelloController {
+	
+	@RequestMapping("/paraTest.do")
+	public ModelAndView paraTest(@RequestParam("query") String query, @RequestParam(value = "p", defaultValue = "1") int page) {
+		
+		ModelAndView mav = new ModelAndView(); // 뷰로 반환히기 위한 객체 생성
+		mav.setViewName("chapter6/paraTest"); // 뷰 이름
+		mav.addObject("query", query);
+		mav.addObject("page", page);
+		
+		return mav;
+		
+	}
 	
 	@RequestMapping("/hello.do")
 	public ModelAndView hello() {
@@ -81,6 +101,69 @@ public class HelloController {
 		
 		return mav;
 	}
+	
+	@RequestMapping("/process.do")
+	public ModelAndView process(HttpServletRequest request, HttpServletResponse response) {
+		ModelAndView mav = new ModelAndView(); // 뷰로 반환히기 위한 객체 생성
+		
+		/* **********************************
+		 * 서블릿 객체를 직접 사용할 때
+		 * **********************************/
+		
+		return mav;
+	}
+	
+	@RequestMapping("/process2.do")
+	public ModelAndView process(HttpSession session) {
+		ModelAndView mav = new ModelAndView(); // 뷰로 반환히기 위한 객체 생성
+		
+		/* **********************************
+		 * 이미 있는 세션을 사용하거나 세션을
+		 * 생성할 때 사용
+		 * **********************************/
+		
+		return mav;
+	}
+	
+	@RequestMapping("/stringReturn.do")
+	public String stringReturn(ModelMap model) {
+		
+		// 에러남;;
+		//model.addAttribute("return", "리턴되씀");
+		//model.addObject("return2", "리턴되씀");
+		
+		return "chapter6/stringReturn";
+	}
+	
+	@RequestMapping("chapter6/urlViewTest.do")
+	public Map<String, Object> urlViewTest() {
+		
+		/* **********************************
+		 * url을 통한 뷰 이름 자동 매칭
+		 * **********************************/
+		
+		Map<String, Object> model = new HashMap<String, Object>();
+		
+		model.put("maptest", "mapTestString");
+		model.put("test", "testString");
+		
+		return model;
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	private String getGreeting() {
 		
