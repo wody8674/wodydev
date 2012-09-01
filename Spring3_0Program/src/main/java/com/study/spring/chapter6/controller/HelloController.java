@@ -11,7 +11,9 @@ import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
@@ -19,6 +21,7 @@ import org.springframework.web.servlet.ModelAndView;
 import com.study.spring.chapter6.vo.HelloVo;
 import com.study.spring.chapter6.vo.OrderCommand;
 import com.study.spring.chapter6.vo.OrderItem;
+import com.study.spring.chapter6.vo.ValidatorVo;
 
 @Controller
 public class HelloController {
@@ -151,13 +154,43 @@ public class HelloController {
 		
 	}
 	
+	@RequestMapping("/hello/{query}/{page}/restful.do")
+	public ModelAndView restFulTest(@PathVariable String query, @PathVariable int page) {
+
+		/* ******************************************************************
+		 * restful 서비스를 위한 REST 방식의 패턴을 적용하기 위한 방법
+		 * ******************************************************************/
+		
+		ModelAndView mav = new ModelAndView(); // 뷰로 반환히기 위한 객체 생성
+		mav.setViewName("chapter6/paraTest"); // 뷰 이름
+		mav.addObject("query", query);
+		mav.addObject("page", page);
+
+		return mav;
+
+	}
 	
-	
-	
-	
-	
-	
-	
+	@RequestMapping("/validator.do")
+	public ModelAndView validator(@ModelAttribute("validator") ValidatorVo validatorVo, BindingResult result) {
+		
+		/* ******************************************************************
+		 * validater test
+		 * ******************************************************************/
+		
+		ModelAndView mav = new ModelAndView(); // 뷰로 반환히기 위한 객체 생성
+		
+		// validator
+		new MemberInfoValidator().validate(validatorVo, result);
+		
+		// 검증 결과 에러 발생시 
+		if (result.hasErrors()) {
+			mav.setViewName("chapter6/validatorError");
+			return mav;
+		}
+		
+		mav.setViewName("chapter6/validator");
+		return mav;
+	}
 	
 	
 	

@@ -44,6 +44,7 @@
 	<servlet-mapping>
 		<servlet-name>appServlet</servlet-name>
 		<url-pattern>*.do</url-pattern>
+		<!-- <url-pattern>/</url-pattern>  restful을 위한 설정 -->
 	</servlet-mapping>
 
 </web-app>
