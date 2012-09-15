@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+
+<script type="text/javascript">
+
+var interval_obj;
+var cnt = 0;
+
+window.onload = init;
+
+function init() {
+	interval_obj = setInterval(creatSpan, 1000);
+	
+}
+
+function creatSpan() {
+	var div_obj = document.getElementById('pane1');
+	var span_obj = document.createElement('span'); // span 노드 생성
+	var number_obj = document.createTextNode(parseInt(Math.random()*100)); // 텍스트 노드 생성
+	
+	span_obj.style.color = "#" + getColor(); // 랜덤 컬럼 생성
+	span_obj.style.fontSize = getFontSize() + "px";
+	
+	span_obj.appendChild(number_obj);
+	div_obj.appendChild(span_obj);
+	
+	if (cnt == 20) {
+		clearInterval(interval_obj);
+	}
+	
+	cnt++;
+}
+
+function getColor() {
+	
+	var colorValue = '';
+	var colorResult = '';
+	
+	for (var i=0; i<6; i++) {
+		colorValue = parseInt(Math.random()*16)+1;
+		
+		if (colorValue == 10) {
+			colorValue = 'a';
+		} else if (colorValue == 11) {
+			colorValue = 'b';
+		} else if (colorValue == 12) {
+			colorValue = 'c';
+		} else if (colorValue == 13) {
+			colorValue = 'd';
+		} else if (colorValue == 14) {
+			colorValue = 'e';
+		} else if (colorValue == 15) {
+			colorValue = 'f';
+		}
+		
+		colorResult += colorValue;
+	}
+	
+	// colorResult = parseInt(Math.random()*0xffffff).toString(16); // 16진수로 문자열 변환
+	
+	return colorResult;
+}
+
+function getFontSize() {
+	return (Math.random()*40)+10;	
+}
+
+</script>
+
+<body>
+	<div id="pane1">
+		<span>1</span>
+	</div>
+</body>
+</html>

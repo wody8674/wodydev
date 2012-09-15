@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+
+<script type="text/javascript">
+
+window.onload=init;
+
+function init() {
+	var btn_m1 = document.getElementById("btn_mission1");
+	btn_m1.addEventListener("click", solveM1, false);
+}
+
+
+function solveM1() {
+	
+	var m1 = document.getElementById("mission_1");
+	m1.style.color = "#ff0000";
+	
+}
+
+</script>
+
+<body>
+
+	<p id="mission_1">미션 1</p><input id="btn_mission1" type="button" value="미션1">
+
+</body>
+</html>

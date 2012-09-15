@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+body {
+	font-size: 9pt;
+}
+
+#panel {
+	width: 600px;
+	height: 300px;
+	border: 1px solid; #999;
+	position: relative;
+}
+
+#bar {
+	position: absolute;
+	left: 50px;
+	top: 190px;
+	width: 500px;
+	height: 20px;
+	background: #f30;
+}
+
+#img1 {
+	position: absolute;
+	left: 50px;
+	top: 80px;
+}
+
+#nav {
+	text-align: center;
+	width: 600px;
+}
+
+</style>
+
+<script type="text/javascript">
+window.onload = init;
+
+var nEndX;
+var nCurrentX;
+var nStartX;
+var nTimerID;
+var nStep;
+var objImg;
+
+function init() {
+	
+	var objBar = document.getElementById("bar");
+	
+	this.nStartX = objBar.offsetLeft; // 시작위치
+	
+	this.nEndX = objBar.clientWidth; 
+	this.nEndX += this.nStartX;
+	this.nEndX -= 275; // 마지막위치
+	
+	this.nCurrentX = this.nStartX; // 이미지의 위치를 시작 위치로 설정
+	
+	this.nStep = 2; 
+	this.nTimerID = 0;
+	
+	this.objImg = document.getElementById("img1");
+	
+	initEventListener();
+}
+
+function initEventListener() {
+	document.getElementById("btn_start").addEventListener("click", function(){
+		start();
+	}, false);
+	
+	document.getElementById("btn_stop").addEventListener("click", function(){
+		stop();
+	}, false);
+}
+
+function start() {
+	if (this.nTimerID == 0) {
+		this.nTimerID = setInterval(moveImg, 30);
+	}
+}
+
+function stop() {
+	if (this.nTimerID != 0) {
+		clearInterval(this.nTimerID);
+		this.nTimerID = 0;
+	}
+}
+
+function moveImg() {
+	this.nCurrentX += this.nStep;
+	
+	if (this.nCurrentX > this.nEndX) {
+		this.nCurrentX = this.nEndX;
+		this.nStep = -2;
+	}
+	
+	if (this.nCurrentX < this.nStartX) {
+		this.nCurrentX = this.nStartX;
+		this.nStep = 2;
+	}
+	
+	this.objImg.style.left = this.nCurrentX + "px";
+}
+
+</script>
+
+</head>
+<body>
+
+	<div>
+		<h4>#img1을 #bar의 영역에서 계속 좌우로 움직이도록 만들어주세요.</h4>
+		
+		<div id="pane1">
+			<div id="bar">
+			</div>
+			<div id="img1">
+				<img alt="움직이는 배" src="../img/ship.png">
+			</div>
+		</div>
+		
+		<div id="nav">
+			<button id="btn_start">시작</button>
+			<button id="btn_stop">멈춤</button>
+		</div>
+	
+	</div>
+
+</body>
+</html>
