@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+
+<script type="text/javascript">
+
+window.onload = function() {
+	
+	// DOM LEVLE 0
+	var btn1_obj = window.document.getElementById("btn1");
+	
+	btn1_obj.onclick = on_Click;
+	btn1_obj.onmouseover = function(e) {
+		alert("마우스 오버");
+		btn1_obj.onmouseover = null;
+	}
+	
+	// DOM LEVLE 2
+	var btn2_obj = window.document.getElementById("btn2");
+	
+	btn2_obj.addEventListener("click", on_Click, false);
+	btn2_obj.addEventListener("mouseover", function(e) {
+		alert("마우스 오버");
+	}, false);
+	
+	
+	var btn3_obj = window.document.getElementById("btn3");
+	var btn4_obj = window.document.getElementById("btn4");
+	
+	btn3_obj.addEventListener("click", function(e) {
+		
+		var mouseEvent = document.createEvent("MouseEvent"); // 이벤트 생성
+		
+		// 이벤트 객체에 담을 데이터
+		mouseEvent.clientX = 100;
+		mouseEvent.clientY = 100;
+		
+		mouseEvent.data1 = "데이터 추가함";
+		
+		mouseEvent.initEvent("click", false, false); // 이벤트 초기화
+		
+		btn4_obj.dispatchEvent(mouseEvent); // 이벤트 발생
+			
+	});
+	
+	btn4_obj.addEventListener("click", function(e) {
+		alert("click이벤트 발생, target = " + e.target.id + ", clientX = " + e.clientX + ", clientY = " + e.clientY + ", data1 = " + e.data1);
+	});
+	
+	
+}
+
+function on_Click(e) {
+	alert("버튼 클릭했음");
+}
+
+
+</script>
+
+<body>
+	<button id="btn1">DOM Level 0방식 테스트 - 마우스를 올려보거나 클릭하세요</button> <br>
+	<button id="btn2">DOM Level 2방식 테스트 - 마우스를 올려보거나 클릭하세요</button> <br>
+	<button id="btn3">버튼1</button> <br>
+	<button id="btn4">버튼2</button> <br>
+</body>
+</html>
