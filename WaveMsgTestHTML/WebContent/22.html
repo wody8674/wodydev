@@ -1,0 +1,255 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>상세 웹페이지</title>
+<script type="text/javaScript" language="javascript">
+
+</script>
+</head>
+
+<body>
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head lang="ko">
+    <meta charset="utf-8">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+<title>Insert title here</title>
+<script type="text/javaScript" language="javascript"> 
+</script>
+</head>
+<body>
+<div id="top_bar_title" style=" width: 200px; height: 20px; position: absolute; margin-left: 22px;
+	margin-top: -5px; color:white; font-size: 20pt; font-family: '현대하모니 M'; z-index: 1 ">네이버 지역검색</div>
+<div style="background-image: url('css-img/top_bg.gif'); background-repeat: repeat-x; width:100%; height: 47px; padding-top: 4px; position:absolute; ; top: 0%; left: 0%;" align="right">
+<img onclick="doButton('back')" src="css-img/btn_back.png">&nbsp;
+</div>
+<!-- <font color="white" style="position: absolute; top:20px; left: 45%; font-size: 20px;">상세 정보</font> -->
+</body>
+</html>
+
+
+
+
+
+<html>
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=yes, target-densitydpi=medium-dpi charset=UTF-8"/>
+<meta http-equiv="Content-Type"  content="application/xhtml+xml; charset=UTF-8" />
+<script type="text/javascript" src="jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="jquery-ui-1.8.17.custom.min.js"></script>
+
+<title>Local Search(standard)</title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+<script type="text/javascript" src="fixed.js"></script>
+<link rel="StyleSheet" href="css/main.css" type="text/css"/>
+</head>
+<body style="background-color: #EEEEEE;">
+<b>
+<script type="text/javaScript" language="javascript">
+
+window.onload = function()
+{
+    if('에도주가'.length>10){
+        var back = document.getElementById("back");
+        back.style.height = 280+"px";
+    } else if('에도주가'.length>20){
+        var back = document.getElementById("back");
+        back.style.height = 325+"px";
+    } 
+    
+    var contentHeight = $("#contents").height();
+    var conTableHeight = $("#conTable").height();
+    
+    $("#back").height((contentHeight-conTableHeight));
+} 
+
+function doPic(url)
+{
+    var form = document.detailForm;
+    form.mainPic.src=url;
+}
+
+function doButton(type)
+{
+    if(type=="call"){
+        location.href="tel:02-508-7756";
+    }else if(type=="back"){
+        location.href="back:";
+    }
+}
+
+function scroll_follow(id)
+{
+        $(window).scroll(function()
+                {
+                var position = $(window).scrollTop();
+                $(id).stop().animate({top:position+45+"px"},1);
+                });    
+    
+}
+//scroll_follow("#images");
+</script>
+
+<form name="detailForm" action="#">
+<div id="back" style="background-color:white; position: absolute; top:70px; left:0px; width: 100%; height:253px; border-bottom-color: #d3d3d3; border-bottom-style: solid; border-bottom-width: 2px"></div>
+<div id="contents" style="position: absolute; top:70px; left: 369px; width: 409px;" >
+
+<table> 
+    <tr>
+        <td colspan="2"  valign="top">
+            <font style="font-size:30pt; font-family: verdana, sans-serif;">에도주가</font>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2"  valign="top">
+            <img src="css-img/4star.png" style="height: 25px">&nbsp;
+            <font style="font-size: 17pt">8.8</font>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" valign="top">
+            <font style="font-size: 17pt;" color="#9498A7">술집, 주점>이자까야</font>
+        </td>
+    </tr>
+    <tr align="left">
+        <td id="buttonPic1" valign="middle" align="center" style="background-image: url('css-img/tel.png');" width="250px" onclick="doButton('call')">
+        <div style="width: 250px; height: 20px; margin-top:-15px; position: absolute;"><font color="white">02-508-7756</font></div>
+        </td>
+        <!-- <td  id="buttonPic2" align="center" style="background-image: url('css-img/map.png');" width="170px" onclick="doButton('map')">
+        </td> -->
+    </tr>
+</table>
+
+<table id="conTable" style="position: relative; top: 8px;">
+    <tr>
+        <td valign="top" width="60px"><font id="title">주소</font></td>
+        <td><font id="content">서울특별시 강남구 역삼1동 827-58 에도긴 빌딩 B1</font></td>
+    </tr>
+    
+    <tr><td colspan="2"><hr></td></tr>
+    <tr>
+        <td  valign="top"><font id="title">시간</font></td>
+        <td>
+        <font id="content">
+       
+            평일 16:00 ~ 04:00<br>
+       
+            주말 16:00 ~ 04:00<br>
+       
+       </font>
+        </td>
+    </tr>
+    
+    
+    <tr><td colspan="2"><hr></td></tr>
+    <tr>
+        <td valign="top"><font id="title">가격</font></td>
+        <td>
+        <font id="content">
+        
+             히라메 사시미(광어 회) 30,000원 <br>
+        
+             마구로 다다끼(살짝 익힌 참치회) 20,000원 <br>
+        
+             모듬 꼬치 20,000원 <br>
+        
+             매콤 해물 야끼 우동 15,000원 <br>
+        
+             카이센 나가사키(나가사키 짬뽕탕) 25,000원 <br>
+        
+             소유 라면 7,000원 <br>
+        
+             준마이 750 35,000원 <br>
+        
+             금정산성 막걸리 7,000원 <br>
+        
+         </font>
+        </td>
+    </tr>
+    
+    
+    <tr><td colspan="2"><hr></td></tr>
+    <tr>
+        <td><font id="title">이용</font></td>
+        <td valign="middle">
+         
+            <img id="usePic" src="css-img/book.png">
+         
+         
+           <img  id="usePic" src="css-img/parking.png">
+         
+         
+         
+           <img  id="usePic" src="css-img/card.png">
+         
+        </td>
+    </tr>
+    
+</table>
+</div>
+
+<div id="images" style="position:absolute; top:70px; left:22px;">
+<table >
+    <tr>
+        <td align="center"  valign="top">
+        <img  id="mainPic" src="http://img.submit.naver.com/siteview_com_img/755/13439755_0.jpg" width=325px height="222px">
+        </td>
+    </tr>
+    <tr height="10px">
+    </tr>
+    <tr>
+        <td align="left" valign="top">
+            
+            
+                <img src="http://img.submit.naver.com/siteview_com_img/755/13439755_0.jpg" width="78px" height="70px" onclick="doPic(this.src)">
+            
+            
+            
+                <img src="http://img.submit.naver.com/siteview_com_img/755/13439755_1.jpg" width="78px" height="70px" onclick="doPic(this.src)">
+            
+            
+            
+                <img src="http://img.submit.naver.com/siteview_com_img/755/13439755_2.jpg" width="78px" height="70px" onclick="doPic(this.src)">
+            
+            
+            
+                <img src="http://img.submit.naver.com/siteview_com_img/755/13439755_3.jpg" width="78px" height="70px" onclick="doPic(this.src)">
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+                
+            
+                
+            
+                
+            
+                
+            
+        </td>
+    </tr>
+</table>
+</div>
+</form>
+</b>
+</body>
+</html>
+</body>
+</html>

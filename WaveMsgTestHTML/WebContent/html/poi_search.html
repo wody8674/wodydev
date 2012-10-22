@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+<title>Insert title here</title>
+
+<link rel="StyleSheet" type="text/css" href="./style.css" />
+
+<script type="text/javascript" src="jquery1.8.js"></script>
+<script type="text/javascript" src="json2.js"></script>
+<script type="text/javascript" src="http://openapi.map.naver.com/openapi/naverMap.naver?ver=2.0&key=2bf1d28b44ab064dbaf4609b023d5af4"></script>
+<!--<script type="text/javascript" src="http://openapi.map.naver.com/openapi/naverMap.naver?ver=2.0&key=b28d728d72b6257311ceb25a797672ec"></script>-->
+<script type="text/javascript" src="poiscript.js"></script>
+
+</head>
+<body>
+
+	<div id="searchDiv" >
+		<textarea id="searchList" name="searchList">
+		</textarea>
+	</div>
+	
+	<button id="submitBtn">검색</button>
+	
+	<div id="resultDiv" >
+		<table id="resultTable">
+		
+			<thead id="tHead">
+				<tr >
+					<td id="poi_id" class="poi_tab">POI_ID</td>
+					<td id="poi_nm" class="poi_tab">POI_명</td>
+					<td id="poi_x" class="poi_tab">X</td>
+					<td id="poi_y" class="poi_tab">Y</td>
+					<td id="poi_addr" class="poi_tab">주소</td>
+				</tr>
+			</thead>
+			
+			<tbody id="tBody">
+				
+			</tbody>
+			
+			<tfoot id="tFoot">
+			
+			</tfoot>
+						
+		</table>
+	</div>
+	
+	<div id="mapDiv" >
+		<script type="text/javascript" src="naver_map.js"></script>
+	</div>
+	
+	<div id="jsonDataLoading"> 데이터를 조회중입니다. </div>
+	
+</body>
+</html>

@@ -1,0 +1,115 @@
+@CHARSET "EUC-KR";
+
+
+div#searchDiv {
+	width: 350px;
+	height: 600px;
+	position: absolute;
+	border: solid;
+	border-color: aqua;
+	left: 10px;
+	top: 10px;
+	
+}
+
+div#resultDiv {
+	height: 600px;
+	position: absolute;
+	border: solid;
+	border-color: aqua;
+	width: 700px;
+	left: 500px;
+	top: 10px;
+	
+	overflow: auto;
+}
+
+div#mapDiv {
+	width: 1000px;
+	height: 1000px;
+	top: 650px;
+	position: relative;
+}
+
+div#jsonDataLoading {
+	width: 500px;
+	height: 100px;
+	position: absolute;
+	
+	left: 200px;
+	top: 200px;
+	
+	border: solid;
+	border-color: aqua;
+	
+	background-color: white;
+	
+	text-align: center;
+	
+	display: none;
+}
+
+
+
+textarea {
+	width: 98%;
+	height: 98%;
+}
+
+textarea#searchList {
+	
+}
+
+table#resultTable{
+	width: 1100px;
+	
+	border-style: inherit;
+	border-color: gray;
+	border-width: 2px;
+}
+
+
+thead td {
+	border: solid;
+	border-color: black;
+	border-width: 2px;
+	width: 100px
+}
+
+table td#poi_id {
+	width: 100px;
+}
+
+table td#poi_nm {
+	width: 300px;
+}
+
+table td#x {
+	width: 100px;
+}
+
+table td#y {
+	width: 100px;
+}
+
+table td#poi_addr {
+	width: 500px;
+}
+
+
+table#resultTable tr.tr_false{
+	color: red;
+}
+
+
+
+button#submitBtn {
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	
+	left: 400px;
+	top: 270px;
+}
+
+

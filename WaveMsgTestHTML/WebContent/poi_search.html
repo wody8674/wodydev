@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+<title>Insert title here</title>
+
+<link rel="StyleSheet" type="text/css" href="./style.css" />
+<script src="jquery1.8.js"></script>
+<script type="text/javascript">
+
+$(document).ready(function() {
+
+	// 버튼 클릭시 서버에 데이터 요청(함수 등록)
+	$("#submitBtn").click(submit);
+	
+	var a = [1, 2, 3, 4];
+	
+	if (typeof(a) == 'array') {
+		alert(배열임);
+	}
+	
+	
+})
+
+
+// 데이터 요청을 위한 메서드
+function submit() {
+	alert("모냥");
+}
+
+// 전달할 데이터를 파싱
+function dataParse() {
+
+}
+
+</script>
+
+</head>
+<body>
+
+	<div id="searchDiv" >
+		<textarea id="searchList" name="searchList">
+		</textarea>
+	</div>
+	
+	<button id="submitBtn">검색</button>
+	
+	<div id="resultDiv" >
+		<table id="resultTable">
+		
+			<thead id="tHead">
+				<tr >
+					<td id="poi_id" class="poi_id">POI_ID</td>
+					<td id="poi_nm" class="poi_id">POI_명</td>
+					<td id="poi_x" class="poi_id">X</td>
+					<td id="poi_y" class="poi_id">Y</td>
+					<td id="poi_exist" class="poi_id">존재 유무</td>
+				</tr>
+			</thead>
+			
+			<tbody id="tBody">
+				<tr >
+					<td id="poi_id" class="poi_id">POI_ID</td>
+					<td id="poi_nm" class="poi_id">POI_명</td>
+					<td id="poi_x" class="poi_id">X</td>
+					<td id="poi_y" class="poi_id">Y</td>
+					<td id="poi_exist" class="poi_id">존재 유무</td>
+				</tr>
+				<!-- 실제 결과 데이터가 표현 될 곳 -->
+			</tbody>
+			
+			<tfoot id="tFoot">
+			
+			
+			</tfoot>
+						
+		</table>
+	</div>
+
+</body>
+</html>
